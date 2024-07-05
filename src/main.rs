@@ -1,5 +1,6 @@
 use rand::Rng;
 use std::io;
+use std::io::prelude::*;
 
 fn main() {
     println!("=== УГАДАЙ ЧИСЛО ===");
@@ -10,6 +11,7 @@ fn main() {
     let mut win = false;
     while !win {
         print!("Введи своё число: ");
+        io::stdout().flush().ok().expect("Error");
         let mut input_number = String::new();
 
         io::stdin().read_line(&mut input_number).expect("Error");
