@@ -9,13 +9,10 @@ fn main() {
 
     let mut win = false;
     while !win {
-
         print!("Введи своё число: ");
         let mut input_number = String::new();
-        
-        io::stdin()
-            .read_line(&mut input_number)
-            .expect("Error");
+
+        io::stdin().read_line(&mut input_number).expect("Error");
         let input_number: u32 = input_number.trim().parse().expect("Надо ввести число!");
 
         println!("Твоё число: {input_number}");
